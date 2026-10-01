@@ -272,7 +272,7 @@ input[type="range"]{width:100%;accent-color:var(--berry-pop);margin:8px 0 0}
 .sim-log .mono{color:var(--ink-2);font-size:.75rem;margin-right:4px}
 .sim-btns{display:flex;gap:8px;flex-wrap:wrap}
 .sub-head{font-size:clamp(1.5rem,3vw,2rem);margin:clamp(56px,8vw,88px) 0 26px}
-.tcards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2.4vw,28px)}
+.tcards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,2.4vw,28px)}
 .tcard{--rx:0deg;--ry:0deg;--px:50%;--py:50%;position:relative;display:flex;flex-direction:column;gap:12px;padding:12px;border-radius:24px;border:2.5px solid var(--stroke);background:var(--tc);box-shadow:5px 5px 0 var(--hard);transform:perspective(900px) rotateX(var(--rx)) rotateY(var(--ry));transition:transform .5s cubic-bezier(.2,.9,.3,1.2);overflow:hidden;min-width:0}
 .tcard.tilting{transition:transform .06s linear}
 .tcard::before,.tcard::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;z-index:3}
@@ -532,7 +532,7 @@ input[type="range"]{width:100%;accent-color:var(--berry-pop);margin:8px 0 0}
 
   <section class="wrap stats" aria-label="Highlights">
     <div class="stat sticker" style="--tilt:-1.6deg;--hl:var(--berry-soft)"><b class="num" data-to="58" data-suf="K">58K</b><span>requests per second through AegisFlow, my AI gateway in Go</span></div>
-    <div class="stat sticker" style="--tilt:1.2deg;--hl:var(--mint-soft)"><b class="num" data-to="30" data-pre="−" data-suf="%">−30%</b><span>p95 latency, at two different companies</span></div>
+    <div class="stat sticker" style="--tilt:1.2deg;--hl:var(--mint-soft)"><b class="num" data-to="3" data-suf="+">3+</b><span>years shipping production code at Rivach, Fractal, and Olympus</span></div>
     <div class="stat sticker" style="--tilt:-.8deg;--hl:var(--butter-soft)"><b class="num" data-to="12">12</b><span>production features shipped at Fractal Analytics</span></div>
     <div class="stat sticker" style="--tilt:1.8deg;--hl:var(--lilac-soft)"><b class="num" data-to="3.8" data-dec="1">3.8</b><span>GPA, M.S. Software Engineering at San José State</span></div>
   </section>
@@ -541,7 +541,7 @@ input[type="range"]{width:100%;accent-color:var(--berry-pop);margin:8px 0 0}
     <div class="about-text">
       <p class="eyebrow">about me</p>
       <h2>I like the part of engineering that starts after launch.</h2>
-      <p>I'm Paavani, a software engineer in San Jose. I recently finished my M.S. in Software Engineering at San José State University, and I've been shipping production code since 2021 at Rivach, Darwinbox, and Fractal Analytics.</p>
+      <p>I'm Paavani, a software engineer in San Jose. I recently finished my M.S. in Software Engineering at San José State University, and I've been shipping production code since 2021 at Rivach, Fractal Analytics, and Olympus.</p>
       <p>My favorite work happens once real users arrive. A query plan falls over at scale, a cache needs to exist, a race condition only appears under heavy writes. I find the bottleneck, fix it, and add the tests so it stays fixed.</p>
       <p>These days I build AI infrastructure. My open-source gateway, AegisFlow, routes LLM traffic at 58K requests per second and heals itself when a provider goes down. You can break it yourself further down this page.</p>
       <ul class="facts">
@@ -577,49 +577,33 @@ Backend · distributed systems · AI infrastructure.</div><div class="dim">Type 
                 <div><h3>Rivach</h3><p class="role">Software Engineer</p></div>
                 <p class="when mono">Jun 2021 – Dec 2022<br>Hyderabad, India</p>
               </header>
-              <ul class="wins"><li><b>25K</b>daily users</li><li><b>−30%</b>p95 latency</li></ul>
+              <ul class="wins"><li><b>25K</b>daily users</li><li><b>−30%</b>p95 latency</li><li><b>+40%</b>deploy frequency</li></ul>
               <ul class="bullets">
                 <li>Built Java REST APIs and MySQL data models for backend services serving 25K daily users, and fixed concurrency failures under high-frequency writes without losing data integrity.</li>
-                <li>Read query execution plans and tuned database access patterns, cutting p95 latency about 30% under concurrent load.</li>
-                <li>Turned ambiguous production failures into scoped fixes, test cases, and documented handoffs through code reviews and troubleshooting.</li>
+                <li>Read query execution plans and tuned database access patterns, cutting p95 latency about 30% while staying correct under concurrent load.</li>
+                <li>Automated Docker-based deployments through GitHub Actions, raising deployment frequency 40% while keeping releases zero-downtime.</li>
               </ul>
-              <ul class="chips"><li>Java</li><li>MySQL</li><li>REST APIs</li><li>Concurrency</li><li>Query tuning</li></ul>
-            </article>
-          </li>
-          <li class="level" style="--lv:var(--sky-soft)">
-            <div class="lvl-badge" aria-hidden="true"><span>LVL<b>2</b></span></div>
-            <article class="lvl-card sticker">
-              <header class="lvl-head">
-                <div><h3>Darwinbox</h3><p class="role">Full Stack Engineer</p></div>
-                <p class="when mono">Dec 2022 – May 2023<br>Hyderabad, India</p>
-              </header>
-              <ul class="wins"><li><b>−30%</b>p95 dashboard latency</li><li><b>−20%</b>redundant traffic</li><li><b>+40%</b>deploy frequency</li></ul>
-              <ul class="bullets">
-                <li>Built and optimized FastAPI and REST services on MySQL indexes and query plans, cutting p95 dashboard latency 30% for workflows serving 10K+ users.</li>
-                <li>Added request validation, caching, and data-access improvements that cut redundant traffic 20%, and documented API behavior for the teams consuming it.</li>
-                <li>Automated Docker-based delivery through GitHub Actions, raising deployment frequency 40% with repeatable testing and release steps.</li>
-              </ul>
-              <ul class="chips"><li>FastAPI</li><li>MySQL</li><li>Docker</li><li>GitHub Actions</li><li>Caching</li></ul>
+              <ul class="chips"><li>Java</li><li>MySQL</li><li>REST APIs</li><li>Concurrency</li><li>Docker</li><li>GitHub Actions</li></ul>
             </article>
           </li>
           <li class="level" style="--lv:var(--butter-soft)">
-            <div class="lvl-badge" aria-hidden="true"><span>LVL<b>3</b></span></div>
+            <div class="lvl-badge" aria-hidden="true"><span>LVL<b>2</b></span></div>
             <article class="lvl-card sticker">
               <header class="lvl-head">
-                <div><h3>Fractal Analytics</h3><p class="role">AI Engineer</p></div>
-                <p class="when mono">Jun 2023 – Aug 2023<br>Mumbai, India</p>
+                <div><h3>Fractal Analytics</h3><p class="role">Software Developer</p></div>
+                <p class="when mono">Dec 2022 – Jul 2024<br>Mumbai, India</p>
               </header>
               <ul class="wins"><li><b>12</b>features shipped</li><li><b>−60%</b>redundant compute</li><li><b>+40%</b>test coverage</li></ul>
               <ul class="bullets">
-                <li>Shipped 12 production features across Python, TypeScript, and Java for a platform reaching millions of users, from object-oriented design through testing and release.</li>
+                <li>Delivered 12 production features across Python, TypeScript, and Java for a platform reaching millions of users, carrying requirements through design, implementation, testing, and release.</li>
                 <li>Reworked PostgreSQL indexes and added Redis caching on hot read paths, removing 60% of redundant computation and cutting query latency by about a third.</li>
-                <li>Used AI coding assistants for test scaffolding and debugging, and wired Jest and Cypress into GitHub Actions. Coverage went up 40% and regressions went down 30%.</li>
+                <li>Integrated Jest and Cypress into GitHub Actions CI/CD, raising automated test coverage 40% and cutting production regressions 30% with repeatable UI and API checks.</li>
               </ul>
               <ul class="chips"><li>Python</li><li>TypeScript</li><li>Java</li><li>PostgreSQL</li><li>Redis</li><li>Jest</li><li>Cypress</li></ul>
             </article>
           </li>
           <li class="level" style="--lv:var(--lilac-soft)">
-            <div class="lvl-badge" aria-hidden="true"><span>LVL<b>4</b></span></div>
+            <div class="lvl-badge" aria-hidden="true"><span>LVL<b>3</b></span></div>
             <article class="lvl-card sticker">
               <header class="lvl-head">
                 <div><h3>San José State University</h3><p class="role">M.S. Software Engineering</p></div>
@@ -630,6 +614,22 @@ Backend · distributed systems · AI infrastructure.</div><div class="dim">Type 
                 <li>Graduated with a 3.8 / 4.0 GPA in the Master of Science in Software Engineering program.</li>
                 <li>Placed runner-up at the Stanford LLM × Law Hackathon in 2025.</li>
               </ul>
+            </article>
+          </li>
+          <li class="level" style="--lv:var(--sky-soft)">
+            <div class="lvl-badge" aria-hidden="true"><span>LVL<b>4</b></span></div>
+            <article class="lvl-card sticker">
+              <header class="lvl-head">
+                <div><h3>Olympus</h3><p class="role">Software Developer Intern</p></div>
+                <p class="when mono">May 2025 – Aug 2025<br>San Jose, CA</p>
+              </header>
+              <ul class="wins"><li><b>−25%</b>response latency</li><li><b>0</b>regressions</li></ul>
+              <ul class="bullets">
+                <li>Engineered a production Python microservice REST API and instrumented Prometheus health metrics, using p95 telemetry to guide tuning that cut response latency 25% with zero regressions.</li>
+                <li>Applied object-oriented design and AI-assisted development tools to compare implementation options, then verified the code through structured reviews, failure-path debugging, and edge-case tests.</li>
+                <li>Documented API behavior and technical tradeoffs while coordinating backend and infrastructure handoffs, turning ambiguous requirements into clear implementation and release steps.</li>
+              </ul>
+              <ul class="chips"><li>Python</li><li>REST APIs</li><li>Microservices</li><li>Prometheus</li><li>Code reviews</li></ul>
             </article>
           </li>
           <li class="level">
@@ -705,8 +705,30 @@ Backend · distributed systems · AI infrastructure.</div><div class="dim">Type 
 
       <h3 class="sub-head">More from the workshop</h3>
       <div class="tcards">
+        <article class="tcard" style="--tc:var(--butter-soft)">
+          <div class="tc-top"><h4 class="tc-name">Omni-Channel Commerce</h4><span class="tc-no">No. 002</span></div>
+          <div class="tc-art"><svg viewBox="0 0 200 120" aria-hidden="true">
+            <path d="M58 46 h70 l-8 40 h-56 z" class="f-paper s-ink"/>
+            <path d="M44 34 h12 l14 52" class="f-none s-ink"/>
+            <circle cx="74" cy="98" r="8" class="f-tire s-ink"/><circle cx="112" cy="98" r="8" class="f-tire s-ink"/>
+            <g class="wave"><rect x="70" y="56" width="10" height="22" rx="5" class="f-berry"/><rect x="86" y="52" width="10" height="26" rx="5" class="f-lilac"/><rect x="102" y="58" width="10" height="20" rx="5" class="f-mint"/></g>
+            <g class="ping"><path d="M146 30 q9 9 0 18" class="f-none s-ink"/><path d="M154 24 q15 15 0 30" class="f-none s-ink"/></g>
+            <g class="stream"><circle cx="150" cy="84" r="3.5" class="f-berry"/><circle cx="150" cy="84" r="3.5" class="f-butter"/><circle cx="150" cy="84" r="3.5" class="f-sky"/></g>
+          </svg></div>
+          <div class="tc-type"><span>Microservices</span><span>99.95% uptime</span></div>
+          <div class="tc-body">
+            <p class="tc-desc">A commerce platform of 10 Spring Boot microservices with an AI Ops Assistant built in.</p>
+            <ul class="moves">
+              <li><span><b>Scale:</b> 75+ REST APIs and 15 Kafka topics for 1M+ products and 500K customers</span></li>
+              <li><span><b>Speed:</b> load-tested to 3,000 concurrent users and 22K+ req/min, p95 cut from 210 ms to 38 ms with Redis</span></li>
+              <li><span><b>AI Ops:</b> 5-agent assistant with 12 LangGraph tools, 400+ tests, 90%+ coverage, builds from 20 min to 4</span></li>
+            </ul>
+            <ul class="chips"><li>Java</li><li>Spring Boot</li><li>Kafka</li><li>Cassandra</li><li>Kubernetes</li></ul>
+          </div>
+        </article>
+
         <article class="tcard" style="--tc:var(--berry-soft)">
-          <div class="tc-top"><h4 class="tc-name">Oprina</h4><span class="tc-no">No. 002</span></div>
+          <div class="tc-top"><h4 class="tc-name">Oprina</h4><span class="tc-no">No. 003</span></div>
           <div class="tc-art"><svg viewBox="0 0 200 120" aria-hidden="true">
             <circle cx="60" cy="62" r="34" class="f-paper s-ink"/>
             <circle cx="49" cy="58" r="4" class="f-ink"/><circle cx="71" cy="58" r="4" class="f-ink"/>
@@ -729,7 +751,7 @@ Backend · distributed systems · AI infrastructure.</div><div class="dim">Type 
         </article>
 
         <article class="tcard" style="--tc:var(--lilac-soft)">
-          <div class="tc-top"><h4 class="tc-name">AI Career Companion</h4><span class="tc-no">No. 003</span></div>
+          <div class="tc-top"><h4 class="tc-name">AI Career Companion</h4><span class="tc-no">No. 004</span></div>
           <div class="tc-art"><svg viewBox="0 0 200 120" aria-hidden="true">
             <rect x="44" y="14" width="76" height="94" rx="10" class="f-paper s-ink"/>
             <rect x="56" y="28" width="32" height="9" rx="4.5" class="f-lilac"/>
@@ -751,7 +773,7 @@ Backend · distributed systems · AI infrastructure.</div><div class="dim">Type 
         </article>
 
         <article class="tcard" style="--tc:var(--mint-soft)">
-          <div class="tc-top"><h4 class="tc-name">Smart Vehicle Cloud</h4><span class="tc-no">No. 004</span></div>
+          <div class="tc-top"><h4 class="tc-name">Smart Vehicle Cloud</h4><span class="tc-no">No. 005</span></div>
           <div class="tc-art"><svg viewBox="0 0 200 120" aria-hidden="true">
             <path d="M64 62 q8 -26 30 -26 h20 q20 0 30 26 z" class="f-paper s-ink"/>
             <path d="M80 60 q5 -16 18 -17 v17 z M106 43 q14 1 20 17 h-20 z" class="f-glass s-ink s-thin"/>
@@ -890,9 +912,9 @@ Backend · distributed systems · AI infrastructure.</div><div class="dim">Type 
     <dl>
       <dt>Looking for</dt><dd>Software Engineer, AI Engineer, and backend or cloud roles</dd>
       <dt>Education</dt><dd>M.S. Software Engineering, San José State University, May 2026. GPA 3.8 / 4.0</dd>
-      <dt>Experience</dt><dd>AI Engineer at Fractal Analytics · Full Stack Engineer at Darwinbox · Software Engineer at Rivach (2021–2023)</dd>
-      <dt>Proof</dt><dd>58K req/s AI gateway in Go · p95 latency −30% at two companies · test coverage +40% · 60% less redundant compute</dd>
-      <dt>Stack</dt><dd>Python, Go, Java, TypeScript · PostgreSQL, MySQL, Redis, Kafka · Kubernetes, Docker, AWS, GCP · LangGraph, RAG, vLLM</dd>
+      <dt>Experience</dt><dd>3+ years: Software Developer Intern at Olympus (2025) · Software Developer at Fractal Analytics (2022–2024) · Software Engineer at Rivach (2021–2022)</dd>
+      <dt>Proof</dt><dd>58K req/s AI gateway in Go · response latency −25% at Olympus · p95 latency −30% at Rivach · test coverage +40% · 60% less redundant compute</dd>
+      <dt>Stack</dt><dd>Python, Java, Go, TypeScript · Spring Boot, FastAPI, React · PostgreSQL, Redis, Kafka, Cassandra · Kubernetes, Docker, AWS, GCP · LangGraph, LangChain</dd>
       <dt>Certs</dt><dd>AWS Solutions Architect – Associate · Google Cloud Computing Foundations · Generative AI with Vertex AI</dd>
       <dt>Email</dt><dd class="mono">paavanik1@gmail.com</dd>
     </dl>
@@ -1159,7 +1181,7 @@ $$('[data-split]').forEach((el,li)=>{
 const mochi=(()=>{
   const btn=$('#mochiBtn'), eyes=$('#heroEyes'), bubble=$('#bubble'), svg=btn.querySelector('svg');
   const lines=["Hi! I'm Mochi, Paavani's tiny QA engineer.","Psst: the gateway demo below really reacts. Try breaking LLM B.","Pet me for a fun fact.","There's a whole deck of flashcards about Paavani. I made them.","Type 'mochi' anywhere. Just saying.","I'm made of strawberry and stack traces."];
-  const facts=["Paavani's gateway, AegisFlow, sustained 58K requests per second.","At Fractal she removed 60% of redundant computation with Redis caching.","She holds the AWS Certified Solutions Architect – Associate.","Runner-up at the Stanford LLM × Law Hackathon in 2025!","She won the Cloud Native Hackathon in 2022.","She cut p95 latency about 30% at Rivach and again at Darwinbox.","Her M.S. GPA at San José State: 3.8 / 4.0.","She wired Jest and Cypress into CI and test coverage jumped 40%.","AegisFlow has 48+ tests for failure recovery and rate limits."];
+  const facts=["Paavani's gateway, AegisFlow, sustained 58K requests per second.","At Fractal she removed 60% of redundant computation with Redis caching.","She holds the AWS Certified Solutions Architect – Associate.","Runner-up at the Stanford LLM × Law Hackathon in 2025!","She won the Cloud Native Hackathon in 2022.","At Olympus she cut response latency 25% with zero regressions.","Her commerce platform's p95 went from 210 ms to 38 ms.","Her M.S. GPA at San José State: 3.8 / 4.0.","She wired Jest and Cypress into CI and test coverage jumped 40%.","AegisFlow has 48+ tests for failure recovery and rate limits."];
   let li=0, pets=0, lockUntil=0, looking=false;
   function say(txt,lock){ bubble.textContent=txt; bubble.classList.remove('pop'); void bubble.offsetWidth; bubble.classList.add('pop'); if(lock) lockUntil=performance.now()+lock; }
   setInterval(()=>{ if(document.hidden||performance.now()<lockUntil) return; li=(li+1)%lines.length; say(lines[li]); },6500);
@@ -1218,9 +1240,9 @@ const mochi=(()=>{
     help:()=>'commands: whoami · about · experience · projects · skills · certs · contact · resume · ls · date · theme · mochi · clear\nand one secret: sudo hire paavani',
     whoami:()=>'Paavani Karuturi. Software engineer in San Jose, CA.\nBackend · distributed systems · AI infrastructure.',
     about:()=>"M.S. Software Engineering, San José State (GPA 3.8). Shipping production code since 2021.\nI find the bottleneck, fix it, and add the tests so it stays fixed.",
-    experience:()=>'2023  AI Engineer          Fractal Analytics   Mumbai\n2022  Full Stack Engineer  Darwinbox           Hyderabad\n2021  Software Engineer    Rivach              Hyderabad',
-    projects:()=>'aegisflow        AI gateway in Go · 58K req/s · circuit breakers\noprina           multimodal AI avatar · Gmail + Calendar agents\ncareer-companion BERT + RAG job matching · 42-person study\nsmart-vehicle    Kafka telemetry · exactly-once · TimescaleDB',
-    skills:()=>'langs  Python Go Java C++ TypeScript JavaScript SQL\ninfra  Kubernetes Docker AWS GCP Kafka GitHub Actions\ndata   PostgreSQL MySQL Redis Cassandra MongoDB\nai     CUDA vLLM Triton LangGraph LangChain MCP RAG',
+    experience:()=>'2025       Software Developer Intern  Olympus            San Jose\n2022–2024  Software Developer         Fractal Analytics  Mumbai\n2021–2022  Software Engineer          Rivach             Hyderabad',
+    projects:()=>'omni-channel     10 Spring Boot microservices · p95 210ms → 38ms\naegisflow        AI gateway in Go · 58K req/s · circuit breakers\noprina           multimodal AI avatar · Gmail + Calendar agents\ncareer-companion BERT + RAG job matching · 42-person study\nsmart-vehicle    Kafka telemetry · exactly-once · TimescaleDB',
+    skills:()=>'langs    Python Java C++ TypeScript JavaScript Go SQL\nbackend  Spring Boot FastAPI REST microservices React Next.js\ninfra    AWS GCP Docker Kubernetes Terraform GitHub Actions\ndata     PostgreSQL MySQL Cassandra MongoDB Redis\nai       LangGraph LangChain GPT-4o LLM tool use Prometheus Grafana',
     certs:()=>'AWS Certified Solutions Architect – Associate\nGoogle Cloud Computing Foundations\nGoogle Cloud: Generative AI with Vertex AI\nAWS Academy Graduate',
     contact:()=>`email     ${EMAIL}\nlinkedin  ${lnk('https://linkedin.com/in/paavani-k1933','linkedin.com/in/paavani-k1933')}\ngithub    ${lnk('https://github.com/paavani019','github.com/paavani019')}`,
     resume:()=>`here you go: ${lnk('Paavani_Karuturi.pdf','Paavani_Karuturi.pdf')}`,
@@ -1431,15 +1453,15 @@ $$('.tcard').forEach(card=>{
     {tag:'Right now',q:'Where is Paavani, and what is she looking for?',a:'San Jose, CA. She finished her M.S. in Software Engineering at San José State in May 2026 with a 3.8 GPA, and she is looking for Software Engineer and AI Engineer roles.',src:'SJSU · 2024–2026'},
     {tag:'Scale',q:"What's the most traffic her code has sustained?",a:'58,000 requests per second, through AegisFlow, the open-source AI gateway she built in Go.',src:'AegisFlow'},
     {tag:'Resilience',q:'What does AegisFlow do when an LLM provider falls over?',a:'A circuit breaker trips, traffic fails over to healthy providers, and a half-open probe brings the provider back once it recovers. You can try it in the simulator above.',src:'AegisFlow'},
-    {tag:'Performance',q:'How did she cut query latency by about a third at Fractal?',a:'She reworked PostgreSQL indexes and added Redis caching on hot read paths, which also removed 60% of redundant computation.',src:'Fractal Analytics · 2023'},
-    {tag:'Shipping',q:'How many production features did she ship at Fractal Analytics?',a:'12, across Python, TypeScript, and Java, for a platform reaching millions of users.',src:'Fractal Analytics · 2023'},
-    {tag:'Quality',q:'How did she cut regressions by 30%?',a:'She used AI coding assistants for test scaffolding and wired Jest and Cypress into GitHub Actions. Test coverage went up 40%.',src:'Fractal Analytics · 2023'},
-    {tag:'Performance',q:'What happened to p95 dashboard latency at Darwinbox?',a:'It dropped 30% for workflows serving 10K+ users, after she tuned FastAPI services, MySQL indexes, and query plans.',src:'Darwinbox · 2022–2023'},
-    {tag:'Delivery',q:'How did she raise deployment frequency by 40%?',a:'By automating Docker-based delivery through GitHub Actions, with repeatable testing and release steps.',src:'Darwinbox · 2022–2023'},
-    {tag:'Concurrency',q:'What did she fix for 25K daily users at Rivach?',a:'Concurrency failures under high-frequency writes in Java REST APIs and MySQL, without giving up data integrity. She also cut p95 latency about 30%.',src:'Rivach · 2021–2022'},
+    {tag:'Performance',q:'How did she cut query latency by about a third at Fractal?',a:'She reworked PostgreSQL indexes and added Redis caching on hot read paths, which also removed 60% of redundant computation.',src:'Fractal Analytics · 2022–2024'},
+    {tag:'Shipping',q:'How many production features did she deliver at Fractal Analytics?',a:'12, across Python, TypeScript, and Java, for a platform reaching millions of users.',src:'Fractal Analytics · 2022–2024'},
+    {tag:'Quality',q:'How did she cut production regressions by 30%?',a:'She integrated Jest and Cypress into GitHub Actions CI/CD for repeatable UI and API checks. Automated test coverage went up 40%.',src:'Fractal Analytics · 2022–2024'},
+    {tag:'Observability',q:'What did she ship as a Software Developer Intern at Olympus?',a:'A production Python microservice REST API with Prometheus health metrics. Using p95 telemetry to guide tuning, she cut response latency 25% with zero regressions.',src:'Olympus · 2025'},
+    {tag:'Scale',q:"How far did she push her Omni-Channel Commerce Platform?",a:'10 Spring Boot microservices, 75+ REST APIs, and 15 Kafka topics, load-tested to 3,000 concurrent users. Redis tuning took p95 from 210 ms to 38 ms.',src:'Omni-Channel Commerce'},
+    {tag:'Concurrency',q:'What did she fix for 25K daily users at Rivach?',a:'Concurrency failures under high-frequency writes in Java REST APIs and MySQL, without giving up data integrity. She also cut p95 latency about 30% and raised deployment frequency 40% with zero-downtime releases.',src:'Rivach · 2021–2022'},
     {tag:'Awards',q:'Which hackathons has she placed in?',a:'Runner-up at the Stanford LLM × Law Hackathon (2025) and winner of the Cloud Native Hackathon (2022).',src:'Achievements'},
     {tag:'Certs',q:'Which cloud certifications does she hold?',a:"AWS Certified Solutions Architect – Associate, AWS Academy Graduate, Google Cloud Computing Foundations, and Google Cloud's Generative AI with Vertex AI.",src:'Certifications'},
-    {tag:'AI stack',q:"What's in her AI and ML toolbox?",a:'CUDA, vLLM, Triton, LangGraph, LangChain, MCP, RAG, LLM evaluation, and prompt engineering.',src:'Skills'},
+    {tag:'AI stack',q:"What's in her AI toolbox?",a:'LangGraph, LangChain, GPT-4o, and LLM tool use. Her commerce platform has a 5-agent AI Ops Assistant with 12 tool integrations.',src:'Skills'},
   ];
   const card=$('#fcCard'), inner=$('.fc-inner',card), front=$('#fcFront'), back=$('#fcBack'), stack=$('#fcStack'), done=$('#fcDone'), controls=$('#fcControls'), deck=$('#fcDeck'), fm=$('#fcMochi');
   let queue=[], learned=0, busy=false, drag=null, suppress=false;
@@ -1483,19 +1505,20 @@ $$('.tcard').forEach(card=>{
 /* ---------- skills gumball machine ---------- */
 (()=>{
   const SKILLS={
-    'Languages':['Python','Java','C++','Go','TypeScript','JavaScript','SQL'],
-    'Systems':['Distributed systems','Concurrency','Parallelism','Data structures','Algorithms','Object-oriented design','Unix/Linux','Networking'],
-    'Cloud & Infra':['Kubernetes','Docker','AWS','GCP','Kafka','GitHub Actions','CI/CD','Prometheus','Grafana','OpenTelemetry'],
-    'Data':['PostgreSQL','MySQL','Cassandra','MongoDB','Redis','Indexing','Caching','Data pipelines','NoSQL'],
-    'AI & ML':['CUDA','vLLM','Triton','LangGraph','LangChain','MCP','RAG','LLM evaluation','Prompt engineering','AI coding assistants'],
-    'Engineering':['Unit testing','Integration testing','Debugging','Troubleshooting','Code reviews','Structured logging','Performance optimization','SDLC'],
+    'Languages':['Python','Java','C++','TypeScript','JavaScript','Go','SQL'],
+    'Backend & Frontend':['Spring Boot','FastAPI','REST APIs','Microservices','React','Next.js','HTML','CSS'],
+    'Cloud & Infra':['AWS','GCP','Docker','Kubernetes','Terraform','GitHub Actions','CI/CD'],
+    'Data & Quality':['PostgreSQL','MySQL','Cassandra','MongoDB','Redis','JUnit','Mockito','Jest','Cypress'],
+    'AI & Observability':['LangGraph','LangChain','GPT-4o','LLM tool use','AI coding assistants','Prometheus','Grafana','OpenTelemetry'],
+    'Systems & Practices':['Data structures','Algorithms','Object-oriented design','Concurrency','Distributed systems','Debugging','Code reviews','Documentation'],
   };
-  const SEEN={'Python':'Fractal Analytics, Oprina','Java':'Rivach, Fractal Analytics','Go':'AegisFlow','TypeScript':'Fractal Analytics','SQL':'Rivach, Darwinbox',
-    'Distributed systems':'AegisFlow','Concurrency':'Rivach','Object-oriented design':'Fractal Analytics',
-    'Kubernetes':'AegisFlow','Docker':'AegisFlow, Darwinbox','AWS':'AI Career Companion, Smart Vehicle Cloud','GCP':'Oprina','Kafka':'Smart Vehicle Cloud','GitHub Actions':'Darwinbox, Fractal Analytics','CI/CD':'Darwinbox, Fractal Analytics','Prometheus':'AegisFlow, Smart Vehicle Cloud','Grafana':'Smart Vehicle Cloud','OpenTelemetry':'AegisFlow',
-    'PostgreSQL':'Fractal Analytics','MySQL':'Rivach, Darwinbox','Redis':'AegisFlow, Fractal Analytics','Indexing':'Fractal Analytics, Darwinbox','Caching':'Fractal Analytics, Darwinbox','Data pipelines':'Smart Vehicle Cloud',
-    'RAG':'AI Career Companion','AI coding assistants':'Fractal Analytics','LLM evaluation':'AI Career Companion',
-    'Unit testing':'Fractal Analytics, AegisFlow','Integration testing':'Fractal Analytics','Debugging':'Darwinbox, Fractal Analytics','Troubleshooting':'Rivach, Darwinbox','Code reviews':'Rivach','Performance optimization':'Rivach, Darwinbox, Fractal Analytics'};
+  const SEEN={'Python':'Olympus, Fractal Analytics','Java':'Rivach, Fractal Analytics, Omni-Channel Commerce','Go':'AegisFlow','TypeScript':'Fractal Analytics','SQL':'Rivach, Fractal Analytics',
+    'Spring Boot':'Omni-Channel Commerce','FastAPI':'Oprina','REST APIs':'Olympus, Rivach, Omni-Channel Commerce','Microservices':'Olympus, Omni-Channel Commerce','React':'AI Career Companion',
+    'AWS':'AI Career Companion, Smart Vehicle Cloud','GCP':'Oprina','Docker':'Rivach, AegisFlow','Kubernetes':'Omni-Channel Commerce, AegisFlow','Terraform':'Smart Vehicle Cloud','GitHub Actions':'Rivach, Fractal Analytics','CI/CD':'Fractal Analytics, Omni-Channel Commerce',
+    'PostgreSQL':'Fractal Analytics, Omni-Channel Commerce','MySQL':'Rivach','Cassandra':'Omni-Channel Commerce','Redis':'Fractal Analytics, Omni-Channel Commerce, AegisFlow','Jest':'Fractal Analytics','Cypress':'Fractal Analytics',
+    'LangGraph':'Omni-Channel Commerce (AI Ops Assistant)','LangChain':'Omni-Channel Commerce (AI Ops Assistant)','GPT-4o':'AI Career Companion','LLM tool use':'Omni-Channel Commerce, Oprina','AI coding assistants':'Olympus',
+    'Prometheus':'Olympus, Omni-Channel Commerce, AegisFlow','Grafana':'Omni-Channel Commerce, Smart Vehicle Cloud','OpenTelemetry':'AegisFlow',
+    'Object-oriented design':'Olympus, Omni-Channel Commerce','Concurrency':'Rivach','Distributed systems':'Omni-Channel Commerce, AegisFlow','Debugging':'Olympus','Code reviews':'Olympus','Documentation':'Olympus'};
   const CATS=Object.keys(SKILLS), CAT_OF={}, ALL=[]; CATS.forEach(c=>SKILLS[c].forEach(s=>{ CAT_OF[s]=c; ALL.push(s); }));
   const cv=$('#gumCanvas'), ctx=cv.getContext('2d'), groupsEl=$('#skillGroups');
   let W=300,H=375,balls=[],vis=false,crank=0,crankTo=0,out=null,cup=null,last=performance.now(),bag=[],pending=null,inited=false;
